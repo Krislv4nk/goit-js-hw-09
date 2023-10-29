@@ -8,10 +8,63 @@
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
+    <style>
 
-    <input type="text" id="datetime-picker" />
+  .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+}
+
+      #datetime-picker {
+        font-size: 20px;
+        padding: 10px;
+        border: 5px solid rgb(21, 69, 85);
+        margin: 10px;
+        color: rgb(20, 96, 116);
+        
+        
+      }
+    
+      button[data-start] {
+        font-size: 30px;
+        padding: 10px;
+        border: none;
+        background-color: rgb(31, 211, 211);
+        color: rgb(20, 114, 117);
+        margin: 10px;
+      }
+    
+      button[data-start]:disabled {
+        background-color: rgba(207, 169, 107, 0.73);
+      }
+    
+      .timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: rgb(20, 96, 116);
+      }
+    
+      .field {
+        margin: 10px;
+        text-align: center;
+      }
+    
+      .value {
+        color: rgb(20, 178, 178);
+      }
+    
+      .label {
+        color: rgb(24, 80, 79);
+      }
+    </style>
+    <div class="container"><input class="" type="text" id="datetime-picker" />
     <button type="button" data-start>Start</button>
-
     <div class="timer">
       <div class="field">
         <span class="value" data-days>00</span>
@@ -29,7 +82,7 @@
         <span class="value" data-seconds>00</span>
         <span class="label">Seconds</span>
       </div>
-    </div>
+    </div></div>
 
     <script src="js/02-timer.js" type="module"></script>
   </body>
